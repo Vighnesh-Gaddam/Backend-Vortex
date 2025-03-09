@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from "bcryptjs"
+import bcrypt from "bcrypt"
 
 const userSchema = new Schema({
     username: {
@@ -10,7 +10,7 @@ const userSchema = new Schema({
         trim: true,
         index: true
     },
-    fullName: {
+    fullname: {
         type: String,
         required: true,
         trim: true,
@@ -29,6 +29,7 @@ const userSchema = new Schema({
     },
     avatar: {
         type: String,
+        // default: "https://res.cloudinary.com/dwq4yjw0o/image/upload/v1685672243/Avatar/Avatar_1.png"
         required: true
     },
     coverImage: {

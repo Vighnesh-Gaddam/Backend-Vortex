@@ -13,7 +13,7 @@ app.use(cors({
 app.use(express.json({ limit: "16kb" }));  // Parse incoming JSON requests (limit set to 16KB)
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));   // Parse URL-encoded form data (limit set to 16KB, allows nested objects)
 app.use(express.static("public"));   // Serve static files (CSS, images, JavaScript, etc.) from the "public" folder
-app.use(cookieParser());
+app.use(cookieParser());  // Helps your app read cookies from requests
 
 //import routes
 import healthcheckRouter from "./routes/healthcheck.routes.js"
